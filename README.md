@@ -43,7 +43,7 @@ All logs are stored in the `logs/` directory and displayed live in the dashboard
 
 Install them:
 
-```bash
+```bash```
 pip install -r requirements.txt
 
 ## 📥 Installation
@@ -76,7 +76,7 @@ python3 honeypy.py -a 0.0.0.0 -p 2222 --ssh --dashboard
 
 python3 honeypy.py -a 0.0.0.0 -p 8080 --http --dashboard -u admin -pw password
 
-    📌 You can customize the username and password for the HTTP honeypot login form using -u and -pw.
+📌 You can customize the username and password for the HTTP honeypot login form using -u and -pw.
 
 🔎 Running the Dashboard Separately
 
