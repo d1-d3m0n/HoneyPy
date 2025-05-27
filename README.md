@@ -8,7 +8,7 @@ Built for learning, monitoring, and basic threat intelligence collection, it's i
 
 ## 📸 Preview
 
-![Dashboard Preview](https://your-image-url.com/preview.png)  
+![Dashboard Preview](dashboard.png)  
 _Real-time attack logs displayed in the web dashboard_
 
 ---
