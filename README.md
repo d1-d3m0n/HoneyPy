@@ -45,3 +45,44 @@ Install them:
 
 ```bash
 pip install -r requirements.txt
+
+## 📥 Installation
+
+Follow these steps to get started:
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/honeypy.git
+cd honeypy
+
+2️⃣ Install Dependencies
+
+Make sure Python 3.8+ is installed.
+
+pip install -r requirements.txt
+
+3️⃣ Give Execution Permissions (if on Linux/macOS)
+
+chmod +x honeypy.py
+chmod +x dashboard.py
+
+🚀 Quick Start
+▶️ Run SSH Honeypot with Dashboard
+
+python3 honeypy.py -a 0.0.0.0 -p 2222 --ssh --dashboard
+
+▶️ Run HTTP Honeypot with Dashboard
+
+python3 honeypy.py -a 0.0.0.0 -p 8080 --http --dashboard -u admin -pw password
+
+    📌 You can customize the username and password for the HTTP honeypot login form using -u and -pw.
+
+🔎 Running the Dashboard Separately
+
+You can also launch the dashboard alone (useful for reviewing logs later):
+
+python3 dashboard.py
+
+Then visit: http://localhost:5000
+
