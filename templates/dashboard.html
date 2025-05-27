@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Honeypot Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-6">Honeypot Login Attempts</h1>
+
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold mb-3">SSH Logs</h2>
+            <div class="bg-white shadow-md rounded p-4 overflow-auto max-h-[400px]">
+                <ul class="space-y-2">
+                    {% for log in ssh_logs %}
+                        <li class="border-b pb-2 text-sm"><strong>{{ log.timestamp }}</strong> — {{ log.message }}</li>
+                    {% else %}
+                        <li class="text-gray-500">No SSH logs found.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold mb-3">HTTP Logs</h2>
+            <div class="bg-white shadow-md rounded p-4 overflow-auto max-h-[400px]">
+                <ul class="space-y-2">
+                    {% for log in http_logs %}
+                        <li class="border-b pb-2 text-sm"><strong>{{ log.timestamp }}</strong> — {{ log.message }}</li>
+                    {% else %}
+                        <li class="text-gray-500">No HTTP logs found.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
